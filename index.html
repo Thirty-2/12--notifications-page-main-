@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <title>Frontend Mentor | Notifications page</title>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+  <div id="Container" class="flex flex-col gap-10 p-5 m-auto w-fit sm:w-fit md:w-fit lg:w-fit xl:w-fit">
+
+    <div id="Noti-1" class="flex items-center justify-between">
+      <h1 class="text-xl font-bold">Notification <b class="px-3 font-normal text-white bg-blue-900 rounded ">3</b></h1>
+        <p id="Read" class="cursor-pointer text-slate-500 hover:text-blue-800">Mark all as read</p>
+    </div>
+
+    <div id="Messages" class="flex flex-col gap-3">
+
+      <div id="Message-1" class="flex gap-3 p-3 rounded bg-slate-100">
+        <img src="assets/images/avatar-mark-webber.webp" alt="" class="w-10 h-10">
+        <div id="Mess-1" class="flex flex-col">
+          <p class=" text-slate-500"><span id="Thick" class="font-bold text-black cursor-pointer hover:text-blue-800">Mark Webber</span> reacted to your recent post <span class="font-bold cursor-pointer hover:text-blue-800">My first tournament today! </span><span id="Unread-1" class="inline-flex bg-red-500 rounded-full p-[4px]"></span></p>
+          <h6 class="text-slate-400">1m ago</h6>
+        </div>
+        <p id="Text"></p>
+      </div>
+      
+      <div id="Message-2" class="flex gap-3 p-3 rounded bg-slate-100">
+        <img src="assets/images/avatar-angela-gray.webp" alt="" class="w-10 h-10">
+        <div id="Mess-1" class="flex flex-col">
+          <p class=" text-slate-500"><span id="Thick" class="font-bold text-black cursor-pointer hover:text-blue-800">Angela Gray</span> followed you <span id="Unread-2" class="inline-flex bg-red-500 rounded-full p-[4px]"></span></p>
+          <h6 class="text-slate-400">5m ago</h6>
+        </div>
+        <p id="Text"></p>
+      </div>
+      
+      <div id="Message-3" class="flex gap-3 p-3 rounded bg-slate-100">
+        <img src="assets/images/avatar-jacob-thompson.webp" alt="" class="w-10 h-10">
+        <div id="Mess-3" class="flex flex-col">
+          <p class=" text-slate-500"><span id="Thick" class="font-bold text-black cursor-pointer hover:text-blue-800">Jacob Thompson</span> has joined your group <span class="font-bold text-blue-900 cursor-pointer">Chess Club </span><span id="Unread-3" class="inline-flex bg-red-500 rounded-full p-[4px]"></span></p>
+          <h6 class="text-slate-400">1 day ago</h6>
+        </div>
+        <p id="Text"></p>
+      </div>
+      
+      <div id="Private" class="">
+        <div id="Message-1" class="flex gap-3 p-3 rounded">
+          <img src="assets/images/avatar-rizky-hasanuddin.webp" alt="" class="w-10 h-10">
+          <div id="Mess-3" class="flex flex-col">
+            <p class=" text-slate-500"><span id="Thick" class="font-bold text-black cursor-pointer hover:text-blue-800">Rizky Hasanuddinn</span> sent you a private message</p>
+            <h6 class="text-slate-400">5 days ago</h6>
+          </div>
+        </div>
+        <div class="flex gap-16">
+          <span></span>
+          <p id="Text" class="p-3 border rounded ">Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and I'm already having lots of fun and improving my game.</p>
+        </div>
+      </div>
+
+      <div id="Chess" class="flex items-baseline justify-between">
+        <div id="Message-1" class="flex gap-3 p-3 rounded">
+          <img src="assets/images/avatar-kimberly-smith.webp" alt="" class="w-10 h-10">
+          <div id="Mess-3" class="flex flex-col">
+            <p class=" text-slate-500"><span id="Thick" class="font-bold text-black cursor-pointer hover:text-blue-800">Kimberly Smith</span> commented on your picture</p>
+            <h6 class="text-slate-400">1 week ago</h6>
+          </div>
+          <p id="Text"></p>
+        </div>
+        <img src="assets/images/image-chess.webp" alt="" class="w-10 h-10">  
+      </div>
+
+      <div id="Message-1" class="flex gap-3 p-3 rounded">
+        <img src="assets/images/avatar-nathan-peterson.webp" alt="" class="w-10 h-10">
+        <div id="Mess-3" class="flex flex-col">
+          <p class=" text-slate-500"><span id="Thick" class="font-bold text-black cursor-pointer hover:text-blue-800">Nathan Peterson</span> reacted to your recent post <span class="font-bold cursor-pointer hover:text-blue-800">5 end-game strategies to increase your win rate </span></p>
+          <h6 class="text-slate-400">2 weeks ago</h6>
+        </div>
+        <p id="Text"></p>
+      </div>
+      
+      <div id="Message-1" class="flex gap-3 p-3 rounded">
+        <img src="assets/images/avatar-anna-kim.webp" alt="" class="w-10 h-10">
+        <div id="Mess-3" class="flex flex-col">
+          <p class=" text-slate-500"><span id="Thick" class="font-bold text-black cursor-pointer hover:text-blue-800">Anna Kim</span> left the group <span class="font-bold text-blue-900 cursor-pointer">Chess Club </span></p>
+          <h6 class="text-slate-400">2 weeks ago</h6>
+        </div>
+        <p id="Text"></p>
+      </div>
+      
+      
+
+    </div>
+
+
+
+  </div>
+  
+  <script>
+    const Read = document.getElementById('Read');
+    Read.addEventListener("click", () => {
+      document.getElementById('Message-1').style.background = "none";
+      document.getElementById('Message-2').style.background = "none";
+      document.getElementById('Message-3').style.background = "none";
+      document.getElementById('Unread-1').style.display = "none";
+      document.getElementById('Unread-2').style.display = "none";
+      document.getElementById('Unread-3').style.display = "none";
+    })
+  </script>
+</body>
+</html>
